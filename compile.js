@@ -13,4 +13,10 @@ const inboxPath = path.resolve(__dirname, 'contracts', 'inbox.sol');
 // read the source code from .sol file.
 const source = fs.readFileSync(inboxPath, 'utf8');
 
-console.log(solc.compile(source, 1));
+// console .log to test  the output is getting generated or not. 
+//console.log(solc.compile(source, 1));
+
+// To make it accessible to other files.
+// Need to export the -Inbox(class- bytecode and abi) to others.
+module.exports = solc.compile(source, 1).contracts[':Inbox'];
+

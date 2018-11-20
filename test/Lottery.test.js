@@ -1,3 +1,4 @@
+// some test cases for the lottery contract.
 const assert = require('assert'); // standard lib, no seperate install needed.
 const ganache = require('ganache-cli'); // for local testrpc.
 // Also, automatically creates some accounts to use in test n/w as soon as the
